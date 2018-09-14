@@ -1,0 +1,23 @@
+<!--pages/picker/picker.wxml-->
+<import src="../../assets/wxss/Template/Template.wxml"/>
+<view class="container">
+  <view class="doc-header">
+    picker 自定义
+  </view>
+
+  <view class="doc-describe">单选</view>
+   <button size="mini" class="button-inline button-primary" hover-class="button-primary-active" bindtap="chooseArea">选择地区{{chooseName}}</button>
+
+  <view class="doc-describe">多选</view>
+  <button size="mini" class="button-inline button-ghost" hover-class="button-ghost-active" bindtap="choosemultiArea">多选地区 : {{MutiliChooseName}}</button>
+
+      <!--单选picker模板-->
+      <view style="{{show_PopupTip?'transform: translateY(0px);':''}}" class="show_Popup">
+        <template is="picker" data="{{items:items}}"/>
+      </view>
+      <!--多选picker模板-->
+      <view style="{{show_multipicker?'transform: translateY(0px);':''}}" class="show_Popup">
+        <template is="multipicker" data="{{items:items}}"/>
+      </view>
+      <view style="{{show_masklayer?'display:block;':'display:none;'}}" class="show-masklayer"></view>
+</view>

@@ -1,0 +1,22 @@
+/**index.wxss**/
+
+.doc-flex {
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.doc-flexitem {
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  border-right: 1px solid #ddd;
+}
+
+.doc-flexitem:last-child {
+  border-bottom: none;
+  border-right: none;
+}
+
+.doc-flex:last-child {
+  border-bottom: none;
+}

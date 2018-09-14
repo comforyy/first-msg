@@ -1,0 +1,26 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/footer/footer",
+    "pages/loading/loading",
+    "pages/Nav/Nav",
+    "pages/Tip/Tip",
+    "pages/Article/Article",
+    "pages/Badge/Badge",
+    "pages/List/List",
+    "pages/Img/Img",
+    "pages/Show/Show",
+    "pages/Audio/Audio",
+    "pages/Form/Form",
+    "pages/Flex/Flex",
+    "pages/Button/Button",
+    "assets/wxss/Template/Template",
+    "pages/Picker/Picker"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "FreeUI",
+    "navigationBarTextStyle": "black"
+  }
+}

@@ -1,0 +1,85 @@
+<!--pages/Form/Form.wxml-->
+<view class="container">
+
+<view class="doc-header">Form 表单</view>
+
+
+<view class="doc-describe">普通表单</view>
+<view class="doc-listform">
+  <view class="doc-listformflex">
+    <view>姓名</view>
+    <view><input name="username" cursor="right" placeholder='请输入姓名'></input></view>
+  </view>
+  <view class="doc-listformflex">
+    <view>年龄</view>
+    <view><input name="userage" type="number" maxlength="2"  placeholder='请输入年龄'></input></view>
+  </view>
+  <view class="doc-listformflex">
+    <view>籍贯</view>
+    <view>
+      <picker mode="date" value="{{date}}" start="2015-09-01" 
+            end="2017-09-01"    bindchange="bindDateChange">
+      <input disabled name="userdate" class="picker" placeholder='{{date}}'  
+              placeholder-class="{{pickerInput?'pickerInput':''}}"></input>
+      </picker>
+    </view>
+  </view>
+  <view class="doc-listformflex">
+    <view>手机号</view>
+    <view><input name="userage" type="number" maxlength="11"  placeholder='请输入手机号' bindblur="checkphone"></input></view>
+  </view>
+  <view class="doc-listformflex">
+    <view>验证码</view>
+    <view>
+      <input name="userage" type="number" maxlength="2"  placeholder='请输入验证码'></input>
+    </view>
+    <view>
+      <button size="mini" class="button-inline button-ghost button-sendmsg" hover-class="button-ghost-active" bindtap="sendMsg">{{sendMsg}}</button>
+    </view>
+  </view>
+  <view class="doc-listformflex">
+    <view>购买数量</view>
+    <view class="doc-formNum">
+        <button bindtap="MinusformNum" size="mini" class="button-inline button-form button-ghost">-</button>
+        <input value="{{formNum}}" name="userage" type="number" maxlength="2"></input>
+        <button bindtap="AddformNum" size="mini" class="button-inline button-form button-ghost">+</button>
+    </view>
+  </view>
+
+
+
+</view>
+
+
+
+<view class="doc-describe">单选表单</view>
+<view class="doc-listform">
+  <view class="doc-listformflex">
+    <view>性别</view>
+    <radio-group class="radio-group" bindchange="radioChange">
+      <label class="radio" wx:for="{{items}}" wx:key="{{items}}">
+        <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+      </label>
+    </radio-group>
+  </view>
+</view>
+
+
+<view class="doc-describe">多选表单</view>
+<view class="doc-listform">
+    <checkbox-group bindchange="checkboxChange">
+      <label class="checkbox" wx:for="{{items}}"  wx:key="{{items}}">
+        <checkbox value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+      </label>
+    </checkbox-group>
+</view>
+
+<view class="doc-describe">多选表单</view>
+<view class="doc-listform">
+  <textarea show-confirm-bar="" bindinput="textareaIn" style="position:relative;">
+    <view style="position:absolute;bottom:10px;right:10px;color:#aaa;"><text style="color:#000;">{{textareaNum}}</text> / 140</view>
+  </textarea>
+</view>
+
+
+</view>

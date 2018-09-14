@@ -1,0 +1,51 @@
+<!--pages/Button/Button.wxml-->
+<view class="container">
+  <view class="doc-header">
+    按钮
+  </view>
+
+  <view class="doc-describe">常见按钮</view>
+    <view class="doc-flex">
+      <view class="doc-flexitem">
+        <button class="button-primary" hover-class="button-primary-active">primary</button>
+      </view>
+    </view>
+    <view class="doc-flex">
+      <view class="doc-flexitem">
+        <button class="button-ghost" hover-class="button-ghost-active">primary-ghost</button>
+      </view>
+    </view>
+    <view class="doc-flex">
+      <view class="doc-flexitem">
+        <button class="button-disabled" disabled>primary-disabled</button>
+      </view>
+    </view>
+
+
+    <view class="doc-describe">带图标的按钮</view>
+    <view class="doc-flex">
+      <view class="doc-flexitem">
+        <button class="button-primary" loading> loading</button>
+      </view>
+    </view>
+    <view class="doc-flex">
+      <view class="doc-flexitem">
+        <button class="button-primary"><text class="iconfont icon-success"></text> success</button>
+      </view>
+    </view>
+
+
+    <view class="doc-describe">行内按钮</view>
+    <view class="doc-list">
+      <view class="doc-list-flex">
+        <button class="button-inline button-ghost" hover-class="button-ghost-active">行内按钮</button>
+        <button class="button-inline button-primary" hover-class="button-primary-active">行内按钮</button>
+        <button class="button-inline" disabled>行内按钮</button>
+      </view>
+      <view class="doc-list-flex" style="margin-bottom:20px;">
+        <button size="mini" class="button-inline button-ghost" hover-class="button-ghost-active">行内按钮</button>
+         <button size="mini" class="button-inline button-primary" hover-class="button-primary-active">行内按钮</button>
+          <button  size="mini" disabled>行内按钮</button>
+      </view>
+    </view>
+</view>
